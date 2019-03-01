@@ -1,2 +1,2 @@
 # spring-vue-element
-springBoot + Vue + Element-UI demo
+SpringBoot + Vue + Element-UI demo
