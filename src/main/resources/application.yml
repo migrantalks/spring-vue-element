@@ -2,6 +2,8 @@ server:
   port: 8099
   tomcat:
     uri-encoding: utf-8
+  servlet:
+    context-path: /jx
 spring:
   datasource:
     druid:
