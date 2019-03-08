@@ -2,7 +2,7 @@ import Mock from 'mockjs'
 
 let adapters = []
 adapters.push(
-  (mockAdapter) => mockAdapter.onPost('/api/member/loadPage').reply(req => {
+  (mockAdapter) => mockAdapter.onPost('/member/loadPage').reply(req => {
     let promise = new Promise((resolve, reject) => {
       let data = req.data ? JSON.parse(req.data) : {
         size: 20
@@ -31,7 +31,7 @@ adapters.push(
 )
 
 adapters.push(
-  (mockAdapter) => mockAdapter.onPost('/api/member/save').reply(req => {
+  (mockAdapter) => mockAdapter.onPost('/member/save').reply(req => {
     let promise = new Promise((resolve, reject) => {
       let data = req.data ? JSON.parse(req.data) : {}
       let result = {}
@@ -52,7 +52,7 @@ adapters.push(
 )
 
 adapters.push(
-  (mockAdapter) => mockAdapter.onGet(/\/api\/member\/remove\/\w+/).reply(req => {
+  (mockAdapter) => mockAdapter.onGet(/\/member\/remove\/\w+/).reply(req => {
     let promise = new Promise((resolve, reject) => {
       let result = {
         success: true,

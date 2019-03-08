@@ -140,7 +140,7 @@ let handleDelete = function(index, row) {
     type: 'warning'
   }).then(() => {
     this.pageLoading = true
-    this.$axios.get('/api/member/delete/' + row.id).then(res => {
+    this.$axios.get('/member/delete/' + row.id).then(res => {
       this.pageLoading = false
       if (res.data.code != 200) {
         this.$message({
@@ -170,7 +170,7 @@ let getRows = function() {
     name: this.filters.query
   }
   //调用post请求
-  this.$axios.post('/api/member/list', params).then(res => {
+  this.$axios.post('/member/list', params).then(res => {
     this.pageLoading = false
     if (!res.data || !res.data.rows)
       return
@@ -193,7 +193,7 @@ let handleSubmit = function() {
     this.formLoading = true
 
     //调用http协议
-    this.$axios.post('/api/member/save', this.form).then(res => {
+    this.$axios.post('/member/save', this.form).then(res => {
       this.formLoading = false
       if (res.data.code != 200) {
         this.$message({

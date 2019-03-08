@@ -12,11 +12,11 @@ module.exports = {
     assetsPublicPath: '/',
 
     proxyTable: {
-      '/api': {
+      '/': {
         target: 'http://localhost:8099/',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/jx'
+          '^/': ''
         }
       }
     },
@@ -29,7 +29,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */
