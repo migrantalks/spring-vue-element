@@ -1,5 +1,4 @@
 # spring-vue-element
-springBoot + Vue + Elemetn-UI demo
 
 ### 配置 node 环境
 
@@ -46,7 +45,7 @@ proxyTable: {
     target: 'http://localhost:8099/',
     changeOrigin: true,
     pathRewrite: {
-      '^/api': '/jx'
+      '^/api': '/'
     }
   }
 }
